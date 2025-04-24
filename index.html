@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew Perfection | Premium Coffee Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#121212',
+                        secondary: '#9B2226',
+                        accent: '#E63946',
+                        light: '#F5F3E8',
+                        darkgray: '#343434',
+                    },
+                    fontFamily: {
+                        'heading': ['Playfair Display', 'serif'],
+                        'body': ['Montserrat', 'sans-serif'],
+                        'accent': ['Courier New', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-body bg-light text-primary">
+    <!-- Navigation -->
+    <nav class="bg-primary text-light">
+        <div class="container mx-auto px-4 py-3 md:flex md:justify-between md:items-center">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-accent font-heading text-2xl font-bold">BREW<span class="text-light">PERFECTION</span></a>
+                <div class="md:hidden">
+                    <button type="button" class="text-light hover:text-accent focus:outline-none" id="menu-toggle">
+                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                            <path id="menu-icon" class="block" fill-rule="evenodd" clip-rule="evenodd" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"></path>
+                            <path id="close-icon" class="hidden" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="menu" class="hidden md:flex md:items-center md:space-x-10 transition duration-300">
+                <a href="index.html" class="block mt-4 md:inline-block md:mt-0 text-light hover:text-accent transition duration-300">Home</a>
+                <a href="menu.html" class="block mt-4 md:inline-block md:mt-0 text-light hover:text-accent transition duration-300">Menu</a>
+                <a href="about.html" class="block mt-4 md:inline-block md:mt-0 text-light hover:text-accent transition duration-300">About</a>
+                <a href="contact.html" class="block mt-4 md:inline-block md:mt-0 text-light hover:text-accent transition duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen flex items-center justify-center">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80');">
+            <div class="absolute inset-0 bg-primary bg-opacity-70"></div>
+        </div>
+        <div class="relative text-center px-6 py-24 max-w-3xl z-10">
+            <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl text-light font-bold mb-4">BREW <span class="text-accent">PERFECTION</span></h1>
+            <p class="text-light text-xl md:text-2xl mb-8">Experience coffee crafted with passion and precision</p>
+            <a href="menu.html" class="bg-secondary text-light px-8 py-3 rounded-sm uppercase tracking-wider hover:bg-accent transition duration-300">View Menu</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="py-16 bg-primary text-light">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-center">
+                <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                    <h2 class="font-heading text-3xl md:text-4xl mb-6">Our <span class="text-accent">Story</span></h2>
+                    <p class="mb-4">Founded in 2010, Brew Perfection has been serving premium coffee from ethically sourced beans. Our master baristas are dedicated to the art of brewing, ensuring every cup delivers an exceptional experience.</p>
+                    <p class="mb-6">We believe in sustainable practices, community engagement, and the power of a perfect cup of coffee to transform your day.</p>
+                    <a href="about.html" class="inline-block border-2 border-accent text-accent px-6 py-2 hover:bg-accent hover:text-light transition duration-300">Learn More</a>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <div class="relative">
+                        <div class="h-72 md:h-96 rounded-sm overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1503481766315-7a586b20f66d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1753&q=80" alt="Coffee shop interior" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 h-20 w-20 bg-accent"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="font-heading text-3xl md:text-4xl text-center mb-12">Featured <span class="text-secondary">Brews</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white shadow-md hover:shadow-lg transition duration-300 group">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1541167760496-1628856ab772?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1337&q=80');">
+                        <div class="h-2 bg-secondary group-hover:bg-accent transition duration-300"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-xl mb-2">Ethiopian Yirgacheffe</h3>
+                        <p class="text-darkgray mb-4">A light-bodied coffee with complex fruity and floral notes, offering a bright acidity.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-accent font-bold">$5.50</span>
+                            <button class="text-secondary border-b border-secondary hover:text-accent hover:border-accent transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="bg-white shadow-md hover:shadow-lg transition duration-300 group">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1541167760496-1628856ab772?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1337&q=80');">
+                        <div class="h-2 bg-secondary group-hover:bg-accent transition duration-300"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-xl mb-2">Mocha Madness</h3>
+                        <p class="text-darkgray mb-4">Rich espresso blended with premium chocolate and topped with whipped cream.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-accent font-bold">$6.25</span>
+                            <button class="text-secondary border-b border-secondary hover:text-accent hover:border-accent transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="bg-white shadow-md hover:shadow-lg transition duration-300 group">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1541167760496-1628856ab772?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1337&q=80');">
+                        <div class="h-2 bg-secondary group-hover:bg-accent transition duration-300"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-xl mb-2">Caramel Macchiato</h3>
+                        <p class="text-darkgray mb-4">Smooth espresso with steamed milk and vanilla, topped with caramel drizzle.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-accent font-bold">$5.95</span>
+                            <button class="text-secondary border-b border-secondary hover:text-accent hover:border-accent transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="menu.html" class="bg-primary text-light px-8 py-3 inline-block hover:bg-secondary transition duration-300">View Full Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-darkgray text-light">
+        <div class="container mx-auto px-4">
+            <h2 class="font-heading text-3xl md:text-4xl text-center mb-12">What Our <span class="text-accent">Customers Say</span></h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="testimonial-slider">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-slide bg-primary bg-opacity-50 p-8 rounded-sm">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mr-4">
+                                <span class="text-light font-bold">JD</span>
+                            </div>
+                            <div>
+                                <h3 class="font-heading text-xl">Jane Doe</h3>
+                                <div class="flex text-accent">
+                                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-light italic">"The Ethiopian Yirgacheffe here is simply the best coffee I've ever had. The atmosphere is perfect for both work and relaxation."</p>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-6">
+                    <button class="testimonial-prev w-10 h-10 bg-primary text-light mr-2 hover:bg-secondary transition duration-300">←</button>
+                    <button class="testimonial-next w-10 h-10 bg-primary text-light ml-2 hover:bg-secondary transition duration-300">→</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-12 bg-secondary">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="font-heading text-2xl md:text-3xl text-light mb-6">Join Our Coffee Club</h2>
+                <p class="text-light mb-8">Subscribe to receive updates on seasonal offerings, events, and exclusive deals.</p>
+                <form class="flex flex-col md:flex-row gap-4">
+                    <input type="email" placeholder="Your email address" class="px-4 py-3 flex-grow focus:outline-none focus:ring-2 focus:ring-accent">
+                    <button type="submit" class="bg-primary text-light px-6 py-3 hover:bg-accent transition duration-300">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-light py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap -mx-4">
+                <!-- Logo and Info -->
+                <div class="w-full md:w-1/3 px-4 mb-8 md:mb-0">
+                    <h3 class="font-heading text-2xl text-accent mb-4">BREW<span class="text-light">PERFECTION</span></h3>
+                    <p class="mb-4">Crafting exceptional coffee experiences since 2010. Visit us today and discover the perfect brew.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://t.me/LastxFighter" target="_blank" class="text-light hover:text-accent transition duration-300" aria-label="Telegram">
+                            <i class="fa-brands fa-telegram text-xl"></i>
+                        </a>
+                        <a href="https://instagram.com/LastxFighter" target="_blank" class="text-light hover:text-accent transition duration-300" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://github.com/mahdi-babaei/" target="_blank" class="text-light hover:text-accent transition duration-300" aria-label="GitHub">
+                             <i class="fa-brands fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Hours -->
+                <div class="w-full md:w-1/3 px-4 mb-8 md:mb-0">
+                    <h3 class="font-heading text-xl mb-4">Hours</h3>
+                    <ul>
+                        <li class="mb-2 flex justify-between">
+                            <span>Monday - Friday</span>
+                            <span>6:30 AM - 8:00 PM</span>
+                        </li>
+                        <li class="mb-2 flex justify-between">
+                            <span>Saturday</span>
+                            <span>7:00 AM - 9:00 PM</span>
+                        </li>
+                        <li class="mb-2 flex justify-between">
+                            <span>Sunday</span>
+                            <span>7:00 AM - 6:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                <div class="w-full md:w-1/3 px-4">
+                    <h3 class="font-heading text-xl mb-4">Contact Us</h3>
+                    <p class="mb-2">123 Coffee Lane</p>
+                    <p class="mb-2">Seattle, WA 98101</p>
+                    <p class="mb-4">(555) 123-4567</p>
+                    <a href="contact.html" class="inline-block border-2 border-accent text-accent px-6 py-2 hover:bg-accent hover:text-light transition duration-300">Get Directions</a>
+                </div>
+            </div>
+            <div class="border-t border-darkgray mt-8 pt-8 text-center text-sm">
+                <p>&copy; 2025 All rights reserved for <span class="text-accent">Last Fighter</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html> 

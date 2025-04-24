@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Brew Perfection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#121212',
+                        secondary: '#9B2226',
+                        accent: '#E63946',
+                        light: '#F5F3E8',
+                        darkgray: '#343434',
+                    },
+                    fontFamily: {
+                        'heading': ['Playfair Display', 'serif'],
+                        'body': ['Montserrat', 'sans-serif'],
+                        'accent': ['Courier New', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-body bg-light text-primary">
+    <!-- Navigation -->
+    <nav class="bg-primary text-light">
+        <div class="container mx-auto px-4 py-3 md:flex md:justify-between md:items-center">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-accent font-heading text-2xl font-bold">BREW<span class="text-light">PERFECTION</span></a>
+                <div class="md:hidden">
+                    <button type="button" class="text-light hover:text-accent focus:outline-none" id="menu-toggle">
+                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                            <path id="menu-icon" class="block" fill-rule="evenodd" clip-rule="evenodd" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"></path>
+                            <path id="close-icon" class="hidden" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="menu" class="hidden md:flex md:items-center md:space-x-10 transition duration-300">
+                <a href="index.html" class="block mt-4 md:inline-block md:mt-0 text-light hover:text-accent transition duration-300">Home</a>
+                <a href="menu.html" class="block mt-4 md:inline-block md:mt-0 text-light hover:text-accent transition duration-300">Menu</a>
+                <a href="about.html" class="block mt-4 md:inline-block md:mt-0 text-light hover:text-accent transition duration-300">About</a>
+                <a href="contact.html" class="block mt-4 md:inline-block md:mt-0 text-light hover:text-accent transition duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="relative py-20 bg-primary">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="font-heading text-4xl md:text-5xl text-light">Contact <span class="text-accent">Us</span></h1>
+            <p class="text-light mt-4 max-w-2xl mx-auto">We'd love to hear from you. Reach out with questions, feedback, or to book a private event.</p>
+        </div>
+    </header>
+
+    <!-- Contact Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap -mx-4">
+                <!-- Contact Form -->
+                <div class="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
+                    <div class="bg-white p-8 shadow-md rounded-sm">
+                        <h2 class="font-heading text-2xl mb-6">Send Us a Message</h2>
+                        <form>
+                            <div class="mb-6">
+                                <label for="name" class="block text-darkgray mb-2">Name <span class="text-secondary">*</span></label>
+                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-secondary newsletter-input" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="email" class="block text-darkgray mb-2">Email <span class="text-secondary">*</span></label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-secondary newsletter-input" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="subject" class="block text-darkgray mb-2">Subject</label>
+                                <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-secondary newsletter-input">
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-darkgray mb-2">Message <span class="text-secondary">*</span></label>
+                                <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-secondary newsletter-input" required></textarea>
+                            </div>
+                            <button type="submit" class="bg-secondary text-light px-8 py-3 hover:bg-accent transition duration-300">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="w-full lg:w-1/2 px-4">
+                    <div class="lg:pl-8">
+                        <h2 class="font-heading text-2xl mb-6">Visit Our Coffee Shop</h2>
+                        
+                        <!-- Map -->
+                        <div class="mb-8 h-64">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6398.931871731267!2d48.52354290362759!3d36.68733994267442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfa!2s!4v1745498456878!5m2!1sfa!2s" width="100%" height="256" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        
+                        <!-- Contact Details -->
+                        <div class="mb-8">
+                            <h3 class="font-heading text-xl mb-4">Contact Information</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <svg class="h-6 w-6 text-secondary mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                    <div>
+                                        <p class="font-medium">Address</p>
+                                        <p class="text-darkgray">123 Coffee Lane<br>Seattle, WA 98101</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-6 w-6 text-secondary mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                    </svg>
+                                    <div>
+                                        <p class="font-medium">Phone</p>
+                                        <p class="text-darkgray">(555) 123-4567</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-6 w-6 text-secondary mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                    </svg>
+                                    <div>
+                                        <p class="font-medium">Email</p>
+                                        <p class="text-darkgray">info@brewperfection.com</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Hours -->
+                        <div>
+                            <h3 class="font-heading text-xl mb-4">Hours of Operation</h3>
+                            <ul>
+                                <li class="mb-2 flex justify-between">
+                                    <span>Monday - Friday</span>
+                                    <span class="text-secondary">6:30 AM - 8:00 PM</span>
+                                </li>
+                                <li class="mb-2 flex justify-between">
+                                    <span>Saturday</span>
+                                    <span class="text-secondary">7:00 AM - 9:00 PM</span>
+                                </li>
+                                <li class="mb-2 flex justify-between">
+                                    <span>Sunday</span>
+                                    <span class="text-secondary">7:00 AM - 6:00 PM</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-primary text-light">
+        <div class="container mx-auto px-4">
+            <h2 class="font-heading text-3xl md:text-4xl text-center mb-12">Frequently Asked <span class="text-accent">Questions</span></h2>
+            
+            <div class="max-w-3xl mx-auto">
+                <!-- FAQ Item 1 -->
+                <div class="mb-6">
+                    <button class="faq-toggle w-full flex justify-between items-center py-4 px-6 bg-darkgray hover:bg-opacity-80 transition duration-300 text-left">
+                        <span class="font-heading text-lg">Do you offer catering services?</span>
+                        <svg class="h-6 w-6 transform transition-transform duration-300 faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden py-4 px-6 bg-darkgray bg-opacity-50">
+                        <p>Yes, we offer catering for events of all sizes. From corporate meetings to weddings, our team can create a custom coffee bar experience for your guests. Please contact us at least 7 days in advance for catering inquiries.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="mb-6">
+                    <button class="faq-toggle w-full flex justify-between items-center py-4 px-6 bg-darkgray hover:bg-opacity-80 transition duration-300 text-left">
+                        <span class="font-heading text-lg">Can I book the space for private events?</span>
+                        <svg class="h-6 w-6 transform transition-transform duration-300 faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden py-4 px-6 bg-darkgray bg-opacity-50">
+                        <p>Yes, our space is available for private events during and after business hours. We offer full and partial buyouts depending on your needs. Please fill out our contact form for availability and pricing information.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="mb-6">
+                    <button class="faq-toggle w-full flex justify-between items-center py-4 px-6 bg-darkgray hover:bg-opacity-80 transition duration-300 text-left">
+                        <span class="font-heading text-lg">Do you have gluten-free or vegan options?</span>
+                        <svg class="h-6 w-6 transform transition-transform duration-300 faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden py-4 px-6 bg-darkgray bg-opacity-50">
+                        <p>Yes, we offer both gluten-free and vegan pastries daily. All plant-based milks (oat, almond, soy) are available for our beverages at no extra charge. Our staff is happy to help identify appropriate options for dietary restrictions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-light py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap -mx-4">
+                <!-- Logo and Info -->
+                <div class="w-full md:w-1/3 px-4 mb-8 md:mb-0">
+                    <h3 class="font-heading text-2xl text-accent mb-4">BREW<span class="text-light">PERFECTION</span></h3>
+                    <p class="mb-4">Crafting exceptional coffee experiences since 2010. Visit us today and discover the perfect brew.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://t.me/LastxFighter" target="_blank" class="text-light hover:text-accent transition duration-300" aria-label="Telegram">
+                            <i class="fa-brands fa-telegram text-xl"></i>
+                        </a>
+                        <a href="https://instagram.com/LastxFighter" target="_blank" class="text-light hover:text-accent transition duration-300" aria-label="Instagram">
+                             <i class="fa-brands fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://github.com/mahdi-babaei/" target="_blank" class="text-light hover:text-accent transition duration-300" aria-label="GitHub">
+                            <i class="fa-brands fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Hours -->
+                <div class="w-full md:w-1/3 px-4 mb-8 md:mb-0">
+                    <h3 class="font-heading text-xl mb-4">Hours</h3>
+                    <ul>
+                        <li class="mb-2 flex justify-between">
+                            <span>Monday - Friday</span>
+                            <span>6:30 AM - 8:00 PM</span>
+                        </li>
+                        <li class="mb-2 flex justify-between">
+                            <span>Saturday</span>
+                            <span>7:00 AM - 9:00 PM</span>
+                        </li>
+                        <li class="mb-2 flex justify-between">
+                            <span>Sunday</span>
+                            <span>7:00 AM - 6:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                <div class="w-full md:w-1/3 px-4">
+                    <h3 class="font-heading text-xl mb-4">Contact Us</h3>
+                    <p class="mb-2">123 Coffee Lane</p>
+                    <p class="mb-2">Seattle, WA 98101</p>
+                    <p class="mb-4">(555) 123-4567</p>
+                    <a href="contact.html" class="inline-block border-2 border-accent text-accent px-6 py-2 hover:bg-accent hover:text-light transition duration-300">Get Directions</a>
+                </div>
+            </div>
+            <div class="border-t border-darkgray mt-8 pt-8 text-center text-sm">
+                <p>&copy; 2025 All rights reserved for <span class="text-accent">Last Fighter</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script>
+        // FAQ Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqToggles = document.querySelectorAll('.faq-toggle');
+            
+            faqToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const arrow = this.querySelector('.faq-arrow');
+                    
+                    // Toggle content visibility
+                    content.classList.toggle('hidden');
+                    
+                    // Rotate arrow
+                    if (content.classList.contains('hidden')) {
+                        arrow.classList.remove('rotate-180');
+                    } else {
+                        arrow.classList.add('rotate-180');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Brew Perfection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#121212',
+                        secondary: '#9B2226',
+                        accent: '#E63946',
+                        light: '#F5F3E8',
+                        darkgray: '#343434',
+                    },
+                    fontFamily: {
+                        'heading': ['Playfair Display', 'serif'],
+                        'body': ['Montserrat', 'sans-serif'],
+                        'accent': ['Courier New', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-body bg-light text-primary">
+    <!-- Navigation -->
+    <nav class="bg-primary text-light">
+        <div class="container mx-auto px-4 py-3 md:flex md:justify-between md:items-center">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-accent font-heading text-2xl font-bold">BREW<span class="text-light">PERFECTION</span></a>
+                <div class="md:hidden">
+                    <button type="button" class="text-light hover:text-accent focus:outline-none" id="menu-toggle">
+                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                            <path id="menu-icon" class="block" fill-rule="evenodd" clip-rule="evenodd" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"></path>
+                            <path id="close-icon" class="hidden" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="menu" class="hidden md:flex md:items-center md:space-x-10 transition duration-300">
+                <a href="index.html" class="block mt-4 md:inline-block md:mt-0 text-light hover:text-accent transition duration-300">Home</a>
+                <a href="menu.html" class="block mt-4 md:inline-block md:mt-0 text-light hover:text-accent transition duration-300">Menu</a>
+                <a href="about.html" class="block mt-4 md:inline-block md:mt-0 text-light hover:text-accent transition duration-300">About</a>
+                <a href="contact.html" class="block mt-4 md:inline-block md:mt-0 text-light hover:text-accent transition duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Header -->
+    <header class="relative py-20 bg-primary">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="font-heading text-4xl md:text-5xl text-light">Our <span class="text-accent">Menu</span></h1>
+            <p class="text-light mt-4 max-w-2xl mx-auto">Explore our handcrafted selection of premium coffees, teas, and delicious pastries made with the finest ingredients.</p>
+        </div>
+    </header>
+
+    <!-- Menu Categories Tabs -->
+    <div class="bg-white sticky top-0 shadow-md z-10">
+        <div class="container mx-auto px-4">
+            <div class="flex overflow-x-auto py-4 space-x-6 no-scrollbar">
+                <button class="category-tab text-lg font-medium whitespace-nowrap px-4 py-2 border-b-2 border-secondary text-secondary" data-category="coffee">Coffee</button>
+                <button class="category-tab text-lg font-medium whitespace-nowrap px-4 py-2 border-b-2 border-transparent hover:text-secondary" data-category="espresso">Espresso</button>
+                <button class="category-tab text-lg font-medium whitespace-nowrap px-4 py-2 border-b-2 border-transparent hover:text-secondary" data-category="tea">Tea</button>
+                <button class="category-tab text-lg font-medium whitespace-nowrap px-4 py-2 border-b-2 border-transparent hover:text-secondary" data-category="pastry">Pastries</button>
+                <button class="category-tab text-lg font-medium whitespace-nowrap px-4 py-2 border-b-2 border-transparent hover:text-secondary" data-category="seasonal">Seasonal</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Content -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <!-- Coffee Menu -->
+            <div class="menu-category active" id="coffee">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Menu Item 1 -->
+                    <div class="bg-white p-6 shadow-md relative overflow-hidden group">
+                        <div class="h-2 bg-secondary absolute top-0 left-0 right-0 group-hover:bg-accent transition duration-300"></div>
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3 mb-4 md:mb-0 md:mr-4">
+                                <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Ethiopian Yirgacheffe" class="rounded-lg w-full h-32 object-cover">
+                            </div>
+                            <div class="md:w-2/3">
+                                <div class="flex justify-between">
+                                    <h3 class="font-heading text-xl">Ethiopian Yirgacheffe</h3>
+                                    <p class="text-accent font-accent">$5.50</p>
+                                </div>
+                                <p class="text-darkgray mt-2">A light-bodied coffee with complex fruity and floral notes, offering a bright acidity.</p>
+                                <div class="mt-4 flex items-center">
+                                    <span class="inline-block px-2 py-1 bg-primary bg-opacity-10 text-xs rounded mr-2">Light Roast</span>
+                                    <span class="inline-block px-2 py-1 bg-primary bg-opacity-10 text-xs rounded">Single Origin</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Menu Item 2 -->
+                    <div class="bg-white p-6 shadow-md relative overflow-hidden group">
+                        <div class="h-2 bg-secondary absolute top-0 left-0 right-0 group-hover:bg-accent transition duration-300"></div>
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3 mb-4 md:mb-0 md:mr-4">
+                                <img src="https://images.unsplash.com/photo-1559305616-3f99cd43e353?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Sumatra Mandheling" class="rounded-lg w-full h-32 object-cover">
+                            </div>
+                            <div class="md:w-2/3">
+                                <div class="flex justify-between">
+                                    <h3 class="font-heading text-xl">Sumatra Mandheling</h3>
+                                    <p class="text-accent font-accent">$5.25</p>
+                                </div>
+                                <p class="text-darkgray mt-2">Full-bodied with earthy, spicy, and herbal notes. Low acidity with a smooth finish.</p>
+                                <div class="mt-4 flex items-center">
+                                    <span class="inline-block px-2 py-1 bg-primary bg-opacity-10 text-xs rounded mr-2">Dark Roast</span>
+                                    <span class="inline-block px-2 py-1 bg-primary bg-opacity-10 text-xs rounded">Single Origin</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Menu Item 3 -->
+                    <div class="bg-white p-6 shadow-md relative overflow-hidden group">
+                        <div class="h-2 bg-secondary absolute top-0 left-0 right-0 group-hover:bg-accent transition duration-300"></div>
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3 mb-4 md:mb-0 md:mr-4">
+                                <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="House Blend" class="rounded-lg w-full h-32 object-cover">
+                            </div>
+                            <div class="md:w-2/3">
+                                <div class="flex justify-between">
+                                    <h3 class="font-heading text-xl">House Blend</h3>
+                                    <p class="text-accent font-accent">$4.75</p>
+                                </div>
+                                <p class="text-darkgray mt-2">A balanced medium roast blend with notes of chocolate, caramel and a subtle citrus finish.</p>
+                                <div class="mt-4 flex items-center">
+                                    <span class="inline-block px-2 py-1 bg-primary bg-opacity-10 text-xs rounded mr-2">Medium Roast</span>
+                                    <span class="inline-block px-2 py-1 bg-primary bg-opacity-10 text-xs rounded">Blend</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Menu Item 4 -->
+                    <div class="bg-white p-6 shadow-md relative overflow-hidden group">
+                        <div class="h-2 bg-secondary absolute top-0 left-0 right-0 group-hover:bg-accent transition duration-300"></div>
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3 mb-4 md:mb-0 md:mr-4">
+                                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Colombian Supremo" class="rounded-lg w-full h-32 object-cover">
+                            </div>
+                            <div class="md:w-2/3">
+                                <div class="flex justify-between">
+                                    <h3 class="font-heading text-xl">Colombian Supremo</h3>
+                                    <p class="text-accent font-accent">$5.00</p>
+                                </div>
+                                <p class="text-darkgray mt-2">Well-balanced with a smooth, clean taste and rich aroma. Notes of caramel and nuts.</p>
+                                <div class="mt-4 flex items-center">
+                                    <span class="inline-block px-2 py-1 bg-primary bg-opacity-10 text-xs rounded mr-2">Medium Roast</span>
+                                    <span class="inline-block px-2 py-1 bg-primary bg-opacity-10 text-xs rounded">Single Origin</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Espresso Menu -->
+            <div class="menu-category hidden" id="espresso">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Menu Item 1 -->
+                    <div class="bg-white p-6 shadow-md relative overflow-hidden group">
+                        <div class="h-2 bg-secondary absolute top-0 left-0 right-0 group-hover:bg-accent transition duration-300"></div>
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3 mb-4 md:mb-0 md:mr-4">
+                                <img src="https://images.unsplash.com/photo-1501747315-124a0eaca060?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Classic Espresso" class="rounded-lg w-full h-32 object-cover">
+                            </div>
+                            <div class="md:w-2/3">
+                                <div class="flex justify-between">
+                                    <h3 class="font-heading text-xl">Classic Espresso</h3>
+                                    <p class="text-accent font-accent">$3.50</p>
+                                </div>
+                                <p class="text-darkgray mt-2">A rich, full-bodied shot of espresso with a layer of crema on top.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Menu Item 2 -->
+                    <div class="bg-white p-6 shadow-md relative overflow-hidden group">
+                        <div class="h-2 bg-secondary absolute top-0 left-0 right-0 group-hover:bg-accent transition duration-300"></div>
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3 mb-4 md:mb-0 md:mr-4">
+                                <img src="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Americano" class="rounded-lg w-full h-32 object-cover">
+                            </div>
+                            <div class="md:w-2/3">
+                                <div class="flex justify-between">
+                                    <h3 class="font-heading text-xl">Americano</h3>
+                                    <p class="text-accent font-accent">$4.25</p>
+                                </div>
+                                <p class="text-darkgray mt-2">Espresso diluted with hot water, creating a coffee similar to drip but with different flavor characteristics.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Menu Item 3 -->
+                    <div class="bg-white p-6 shadow-md relative overflow-hidden group">
+                        <div class="h-2 bg-secondary absolute top-0 left-0 right-0 group-hover:bg-accent transition duration-300"></div>
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3 mb-4 md:mb-0 md:mr-4">
+                                <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Cappuccino" class="rounded-lg w-full h-32 object-cover">
+                            </div>
+                            <div class="md:w-2/3">
+                                <div class="flex justify-between">
+                                    <h3 class="font-heading text-xl">Cappuccino</h3>
+                                    <p class="text-accent font-accent">$5.25</p>
+                                </div>
+                                <p class="text-darkgray mt-2">Equal parts espresso, steamed milk, and milk foam, creating a light, creamy coffee drink.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Menu Item 4 -->
+                    <div class="bg-white p-6 shadow-md relative overflow-hidden group">
+                        <div class="h-2 bg-secondary absolute top-0 left-0 right-0 group-hover:bg-accent transition duration-300"></div>
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3 mb-4 md:mb-0 md:mr-4">
+                                <img src="https://images.pexels.com/photos/302896/pexels-photo-302896.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Caramel Macchiato" class="rounded-lg w-full h-32 object-cover">
+                            </div>
+                            <div class="md:w-2/3">
+                                <div class="flex justify-between">
+                                    <h3 class="font-heading text-xl">Caramel Macchiato</h3>
+                                    <p class="text-accent font-accent">$5.95</p>
+                                </div>
+                                <p class="text-darkgray mt-2">Smooth espresso with steamed milk and vanilla, topped with caramel drizzle.</p>
+                                <div class="mt-4 flex items-center">
+                                    <span class="inline-block px-2 py-1 bg-primary bg-opacity-10 text-xs rounded">Signature Drink</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tea Menu (Hidden by Default) -->
+            <div class="menu-category hidden" id="tea">
+                <!-- Tea menu items would go here -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Menu Item 1 -->
+                    <div class="bg-white p-6 shadow-md relative overflow-hidden group">
+                        <div class="h-2 bg-secondary absolute top-0 left-0 right-0 group-hover:bg-accent transition duration-300"></div>
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3 mb-4 md:mb-0 md:mr-4">
+                                <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Earl Grey" class="rounded-lg w-full h-32 object-cover">
+                            </div>
+                            <div class="md:w-2/3">
+                                <div class="flex justify-between">
+                                    <h3 class="font-heading text-xl">Earl Grey</h3>
+                                    <p class="text-accent font-accent">$4.25</p>
+                                </div>
+                                <p class="text-darkgray mt-2">Black tea infused with bergamot oil, creating a citrusy, aromatic profile.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Menu Item 2 -->
+                    <div class="bg-white p-6 shadow-md relative overflow-hidden group">
+                        <div class="h-2 bg-secondary absolute top-0 left-0 right-0 group-hover:bg-accent transition duration-300"></div>
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3 mb-4 md:mb-0 md:mr-4">
+                                <img src="https://images.pexels.com/photos/4051561/pexels-photo-4051561.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Jasmine Green" class="rounded-lg w-full h-32 object-cover">
+                            </div>
+                            <div class="md:w-2/3">
+                                <div class="flex justify-between">
+                                    <h3 class="font-heading text-xl">Jasmine Green</h3>
+                                    <p class="text-accent font-accent">$4.50</p>
+                                </div>
+                                <p class="text-darkgray mt-2">Green tea scented with jasmine flowers, offering a delicate floral aroma and taste.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pastry Menu (Hidden by Default) -->
+            <div class="menu-category hidden" id="pastry">
+                <!-- Pastry menu items would go here -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Menu Item 1 -->
+                    <div class="bg-white p-6 shadow-md relative overflow-hidden group">
+                        <div class="h-2 bg-secondary absolute top-0 left-0 right-0 group-hover:bg-accent transition duration-300"></div>
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3 mb-4 md:mb-0 md:mr-4">
+                                <img src="https://images.unsplash.com/photo-1509365465985-25d11c17e812?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Almond Croissant" class="rounded-lg w-full h-32 object-cover">
+                            </div>
+                            <div class="md:w-2/3">
+                                <div class="flex justify-between">
+                                    <h3 class="font-heading text-xl">Almond Croissant</h3>
+                                    <p class="text-accent font-accent">$4.75</p>
+                                </div>
+                                <p class="text-darkgray mt-2">Buttery layered croissant filled with almond cream and topped with sliced almonds.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Menu Item 2 -->
+                    <div class="bg-white p-6 shadow-md relative overflow-hidden group">
+                        <div class="h-2 bg-secondary absolute top-0 left-0 right-0 group-hover:bg-accent transition duration-300"></div>
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3 mb-4 md:mb-0 md:mr-4">
+                                <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Chocolate Chip Cookie" class="rounded-lg w-full h-32 object-cover">
+                            </div>
+                            <div class="md:w-2/3">
+                                <div class="flex justify-between">
+                                    <h3 class="font-heading text-xl">Chocolate Chip Cookie</h3>
+                                    <p class="text-accent font-accent">$3.25</p>
+                                </div>
+                                <p class="text-darkgray mt-2">Classic cookie with a perfect balance of chocolate chunks and a soft, chewy texture.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seasonal Menu (Hidden by Default) -->
+            <div class="menu-category hidden" id="seasonal">
+                <!-- Seasonal menu items would go here -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Menu Item 1 -->
+                    <div class="bg-white p-6 shadow-md relative overflow-hidden group">
+                        <div class="h-2 bg-secondary absolute top-0 left-0 right-0 group-hover:bg-accent transition duration-300"></div>
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3 mb-4 md:mb-0 md:mr-4">
+                                <img src="https://images.pexels.com/photos/2638019/pexels-photo-2638019.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Pumpkin Spice Latte" class="rounded-lg w-full h-32 object-cover">
+                            </div>
+                            <div class="md:w-2/3">
+                                <div class="flex justify-between">
+                                    <h3 class="font-heading text-xl">Pumpkin Spice Latte</h3>
+                                    <p class="text-accent font-accent">$6.25</p>
+                                </div>
+                                <p class="text-darkgray mt-2">Espresso with steamed milk, pumpkin spice syrup, topped with whipped cream and cinnamon.</p>
+                                <div class="mt-4 flex items-center">
+                                    <span class="inline-block px-2 py-1 bg-primary bg-opacity-10 text-xs rounded">Fall Special</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Menu Item 2 -->
+                    <div class="bg-white p-6 shadow-md relative overflow-hidden group">
+                        <div class="h-2 bg-secondary absolute top-0 left-0 right-0 group-hover:bg-accent transition duration-300"></div>
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/3 mb-4 md:mb-0 md:mr-4">
+                                <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Iced Honey Lavender Latte" class="rounded-lg w-full h-32 object-cover">
+                            </div>
+                            <div class="md:w-2/3">
+                                <div class="flex justify-between">
+                                    <h3 class="font-heading text-xl">Iced Honey Lavender Latte</h3>
+                                    <p class="text-accent font-accent">$6.50</p>
+                                </div>
+                                <p class="text-darkgray mt-2">Espresso with cold milk, house-made honey lavender syrup, served over ice.</p>
+                                <div class="mt-4 flex items-center">
+                                    <span class="inline-block px-2 py-1 bg-primary bg-opacity-10 text-xs rounded">Summer Special</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-light py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap -mx-4">
+                <!-- Logo and Info -->
+                <div class="w-full md:w-1/3 px-4 mb-8 md:mb-0">
+                    <h3 class="font-heading text-2xl text-accent mb-4">BREW<span class="text-light">PERFECTION</span></h3>
+                    <p class="mb-4">Crafting exceptional coffee experiences since 2010. Visit us today and discover the perfect brew.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://t.me/LastxFighter" target="_blank" class="text-light hover:text-accent transition duration-300" aria-label="Telegram">
+                           <i class="fa-brands fa-telegram text-xl"></i>
+                        </a>
+                        <a href="https://instagram.com/LastxFighter" target="_blank" class="text-light hover:text-accent transition duration-300" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://github.com/mahdi-babaei/" target="_blank" class="text-light hover:text-accent transition duration-300" aria-label="GitHub">
+                           <i class="fa-brands fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Hours -->
+                <div class="w-full md:w-1/3 px-4 mb-8 md:mb-0">
+                    <h3 class="font-heading text-xl mb-4">Hours</h3>
+                    <ul>
+                        <li class="mb-2 flex justify-between">
+                            <span>Monday - Friday</span>
+                            <span>6:30 AM - 8:00 PM</span>
+                        </li>
+                        <li class="mb-2 flex justify-between">
+                            <span>Saturday</span>
+                            <span>7:00 AM - 9:00 PM</span>
+                        </li>
+                        <li class="mb-2 flex justify-between">
+                            <span>Sunday</span>
+                            <span>7:00 AM - 6:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                <div class="w-full md:w-1/3 px-4">
+                    <h3 class="font-heading text-xl mb-4">Contact Us</h3>
+                    <p class="mb-2">123 Coffee Lane</p>
+                    <p class="mb-2">Seattle, WA 98101</p>
+                    <p class="mb-4">(555) 123-4567</p>
+                    <a href="contact.html" class="inline-block border-2 border-accent text-accent px-6 py-2 hover:bg-accent hover:text-light transition duration-300">Get Directions</a>
+                </div>
+            </div>
+            <div class="border-t border-darkgray mt-8 pt-8 text-center text-sm">
+                <p>&copy; 2025 All rights reserved for <span class="text-accent">Last Fighter</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add the menu category functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryTabs = document.querySelectorAll('.category-tab');
+            const menuCategories = document.querySelectorAll('.menu-category');
+
+            categoryTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const category = this.dataset.category;
+                    
+                    // Reset all tabs
+                    categoryTabs.forEach(t => {
+                        t.classList.remove('text-secondary', 'border-secondary');
+                        t.classList.add('border-transparent');
+                    });
+                    
+                    // Activate clicked tab
+                    this.classList.add('text-secondary', 'border-secondary');
+                    this.classList.remove('border-transparent');
+                    
+                    // Hide all menu categories
+                    menuCategories.forEach(c => {
+                        c.classList.add('hidden');
+                        c.classList.remove('active');
+                    });
+                    
+                    // Show selected category
+                    const selectedCategory = document.getElementById(category);
+                    if (selectedCategory) {
+                        selectedCategory.classList.remove('hidden');
+                        selectedCategory.classList.add('active');
+                    }
+                });
+            });
+
+            // Run the rest of the JavaScript from the main file
+            const script = document.createElement('script');
+            script.src = 'scripts.js';
+            document.body.appendChild(script);
+        });
+    </script>
+</body>
+</html> 
